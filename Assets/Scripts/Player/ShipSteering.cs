@@ -1,31 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Assets.Scripts;
 
 public class ShipAcceleration : MonoBehaviour
 {
     public float rotationSpeed = 600;
     public float targetAngle;
-    public Direction currentDirection;
-    public Direction targetDirection;
-    public enum Direction
-    {
-        Right,
-        UpRight,
-        DownRight,
-        Left,
-        UpLeft,
-        DownLeft,
-        Up,
-        Down
-    }
-    // Start is called before the first frame update
+    public Direction currentDirection = Direction.Up;
+    public Direction targetDirection = Direction.Up;
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
@@ -67,7 +56,6 @@ public class ShipAcceleration : MonoBehaviour
 
         if (targetDirection != currentDirection)
         {
-
             switch (targetDirection)
             {
                 case Direction.Up:
@@ -98,7 +86,6 @@ public class ShipAcceleration : MonoBehaviour
 
             if (targetAngle != transform.eulerAngles.z)
             {
-                Debug.Log("Direction Changing");
                 transform.rotation = Quaternion.Euler(
                     0,
                     0,
@@ -108,10 +95,7 @@ public class ShipAcceleration : MonoBehaviour
             else
             {
                 currentDirection = targetDirection;
-
             }
-
-
         }
     }
 }

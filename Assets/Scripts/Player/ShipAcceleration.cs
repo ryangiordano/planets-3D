@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipMovement : MonoBehaviour
+public class ShipSteering : MonoBehaviour
 {
     public float speed = 10;
     public float acceleration = 100;
-
     private Vector2 velocity;
     // Start is called before the first frame update
     void Start()
@@ -17,16 +16,9 @@ public class ShipMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // float h = Input.GetAxis("Horizontal");
-        // float v = Input.GetAxis("Vertical");
-
-        // velocity = new Vector2(h, v).normalized * speed;
-
-        // transform.position += new Vector3(0, velocity.y * Time.deltaTime, 0);
-        // transform.position += new Vector3(velocity.x * Time.deltaTime, 0, 0);
-
-        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+        Vector2 input = new Vector2(x, y);
         velocity = Vector2.Lerp(
           velocity,
           velocity + (input * acceleration * Time.deltaTime),

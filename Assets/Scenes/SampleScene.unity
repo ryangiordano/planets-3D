@@ -237,8 +237,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 600
   targetAngle: 0
-  currentDirection: 0
-  targetDirection: 0
+  currentDirection: 6
+  targetDirection: 6
 --- !u!114 &304810658
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipSteering : MonoBehaviour
+public class ShipAcceleration : MonoBehaviour
 {
     public float speed = 10;
     public float acceleration = 100;

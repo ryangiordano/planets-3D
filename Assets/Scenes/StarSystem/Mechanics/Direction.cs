@@ -1,4 +1,4 @@
-namespace Assets.Scripts
+namespace StarSystem.Mechanics
 {
     public enum Direction
     {

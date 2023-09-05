@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Assets.Scripts;
+using StarSystem.Mechanics;
 
-public class ShipAcceleration : MonoBehaviour
+public class ShipSteering : MonoBehaviour
 {
     public float rotationSpeed = 600;
     public float targetAngle;

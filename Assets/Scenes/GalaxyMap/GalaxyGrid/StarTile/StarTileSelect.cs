@@ -21,7 +21,8 @@ public class StarTileSelect : MonoBehaviour
             StarTileHover starTileHover = GetComponent<StarTileHover>();
             if (starTileHover.hovered)
             {
-                OnSelectStarTile?.Invoke(42);
+                StarTileData starTileData = GetComponent<StarTileData>();
+                OnSelectStarTile?.Invoke(starTileData.starSystemId);
             }
 
         }

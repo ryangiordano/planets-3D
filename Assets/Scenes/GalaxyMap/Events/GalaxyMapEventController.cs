@@ -17,5 +17,6 @@ public class GalaxyMapEventController : MonoBehaviour
     private void HandlSelectStarTile(int id)
     {
         SceneManager.LoadScene("StarSystemScene");
+        GameManager.currentStarSystemId = id;
     }
 }

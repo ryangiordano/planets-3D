@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 6448306188756841040}
   - component: {fileID: -4742317002546790506}
   - component: {fileID: -3990802824191587444}
-  - component: {fileID: 7661004260680613431}
   - component: {fileID: 7439803522815082835}
+  - component: {fileID: 7661004260680613431}
   m_Layer: 0
   m_Name: StarTile
   m_TagString: Untagged
@@ -113,6 +113,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f0df87202ce67489014037177a714b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7439803522815082835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6448306188756841041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da27ca369dbff94a9a802fb66e4080e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starSystemId: 0
 --- !u!135 &7661004260680613431
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -126,15 +139,3 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.45
   m_Center: {x: 0, y: 0.1001687, z: 0}
---- !u!114 &7439803522815082835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6448306188756841041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4da27ca369dbff94a9a802fb66e4080e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

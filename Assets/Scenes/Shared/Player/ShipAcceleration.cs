@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipAcceleration : MonoBehaviour
 {
-    public float speed = 10;
+    public float speed;
     public float acceleration = 100;
     private Vector2 velocity;
     // Start is called before the first frame update

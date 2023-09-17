@@ -7,7 +7,7 @@ public class CameraFollow : MonoBehaviour
 
     public Transform target;
 
-    public float smoothTime = 0.3f;
+    public float smoothTime = 0f;
 
     public float distance = 10;
 
@@ -21,12 +21,13 @@ public class CameraFollow : MonoBehaviour
         // Offset to maintain distance
         targetPos += -transform.forward * distance;
         // Smoothly interpolate camera position
-        transform.position = Vector3.SmoothDamp(
-          transform.position,
-          targetPos,
-          ref velocity,
-          smoothTime
-        );
+        // transform.position = Vector3.SmoothDamp(
+        //   transform.position,
+        //   targetPos,
+        //   ref velocity,
+        //   smoothTime
+        // );
+        transform.position = targetPos;
 
     }
 

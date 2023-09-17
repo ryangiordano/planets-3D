@@ -17,7 +17,6 @@ public class GalaxyMapManager : MonoBehaviour
 
             StarTileData tile = tiles.Where(t => t.starSystemId == GameManager.currentStarSystemId)
                         .FirstOrDefault();
-            Debug.Log(tiles);
 
             obj.transform.position = new Vector3(tile.transform.position.x, tile.transform.position.y, 0);
         }

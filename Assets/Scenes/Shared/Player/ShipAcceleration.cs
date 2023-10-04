@@ -7,6 +7,8 @@ public class ShipAcceleration : MonoBehaviour
     public float speed;
     public float acceleration = 100;
     private Vector2 velocity;
+
+    private float currentSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,25 +18,32 @@ public class ShipAcceleration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float x = Input.GetAxis("Horizontal");
-        float y = Input.GetAxis("Vertical");
-        Vector2 input = new Vector2(x, y);
-        velocity = Vector2.Lerp(
-          velocity,
-          velocity + (input * acceleration * Time.deltaTime),
-          acceleration * Time.deltaTime
-        );
 
-        transform.position += new Vector3(
-            velocity.x * Time.deltaTime,
-            velocity.y * Time.deltaTime,
-            0
-        );
+        Quaternion facing = GetShipFacing();
+        Vector3 moveDir = facing * Vector3.up;
 
-        velocity *= 0.99f;
-        if (velocity.magnitude > speed)
+        float movementAmount = 0;
+
+        if (Input.GetKey(KeyCode.W))
         {
-            velocity = velocity.normalized * speed;
-        };
+            movementAmount = 1;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            movementAmount = -1;
+        }
+
+        if (movementAmount != 0)
+        {
+
+            transform.position += transform.up * Time.deltaTime * speed;
+
+        }
+
+    }
+    private Quaternion GetShipFacing()
+    {
+        float directionAngle = transform.eulerAngles.z;
+        return Quaternion.Euler(0, 0, directionAngle);
     }
 }

@@ -35,7 +35,7 @@ public class ShipFiring : MonoBehaviour
 
     private Vector3 GetFirePointOffset()
     {
-        return transform.position + firePointOffset;
+        return new Vector3(transform.position.x, transform.position.y, 0) + firePointOffset;
     }
 
     private Quaternion GetShipFacing()

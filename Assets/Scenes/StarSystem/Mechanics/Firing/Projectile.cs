@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     private float timer;
     public float speed = 50f;
-    private float lifespan = 0.3f;
+    private float lifespan = 100.3f;
     public Vector3 direction;
     // Start is called before the first frame update
     void Start()

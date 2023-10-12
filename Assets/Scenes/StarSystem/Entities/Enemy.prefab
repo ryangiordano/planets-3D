@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3182085449006604116
+--- !u!1 &5498455291825729299
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,52 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3182085449006604136}
-  - component: {fileID: 3182085449006604119}
-  - component: {fileID: 3182085449006604118}
-  - component: {fileID: 3182085449006604117}
-  - component: {fileID: 3182085449006604138}
-  - component: {fileID: 3182085449006604137}
-  - component: {fileID: -3141470325581715802}
-  - component: {fileID: 2372647816712888878}
-  - component: {fileID: 936819788075718370}
+  - component: {fileID: 5498455291825729303}
+  - component: {fileID: 5498455291825729296}
+  - component: {fileID: 5498455291825729297}
+  - component: {fileID: 5498455291825729298}
+  - component: {fileID: -8825681631623877600}
+  - component: {fileID: 7946736937232869649}
+  - component: {fileID: 7572475241098806754}
   m_Layer: 0
-  m_Name: Ship
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3182085449006604136
+--- !u!4 &5498455291825729303
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3182085449006604116}
+  m_GameObject: {fileID: 5498455291825729299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.82, z: 0}
-  m_LocalScale: {x: 0.19, y: 0.19, z: 0.19}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 17.5, y: 24.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3182085449006604119
+--- !u!33 &5498455291825729296
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3182085449006604116}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3182085449006604118
+  m_GameObject: {fileID: 5498455291825729299}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &5498455291825729297
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3182085449006604116}
+  m_GameObject: {fileID: 5498455291825729299}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -89,70 +87,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3182085449006604117
-CapsuleCollider:
+--- !u!65 &5498455291825729298
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3182085449006604116}
+  m_GameObject: {fileID: 5498455291825729299}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3182085449006604138
+--- !u!114 &-8825681631623877600
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3182085449006604116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f66ae19d12c64b4abaffe8672c448b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationSpeed: 600
-  targetAngle: 0
-  currentDirection: 6
-  targetDirection: 6
---- !u!114 &3182085449006604137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3182085449006604116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2174bff36f4f8e46bcfdab948d1bc54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 0
-  acceleration: 100
---- !u!114 &-3141470325581715802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3182085449006604116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41a96274d0b1bfb4facf4dfa51bf75ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireRate: 0.5
---- !u!114 &2372647816712888878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3182085449006604116}
+  m_GameObject: {fileID: 5498455291825729299}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f049b2b70ae03f74fb852d0a9b235256, type: 3}
@@ -160,16 +114,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7343536487421821507, guid: af8058adf80dd94418d9a1556c8ad2a2, type: 3}
   firePointOffset: {x: 0, y: 0, z: 0}
---- !u!114 &936819788075718370
+--- !u!114 &7946736937232869649
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3182085449006604116}
+  m_GameObject: {fileID: 5498455291825729299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69ffb0ac7a0e41949917ba9590e9b499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRadius: 5
+  target: {fileID: 0}
+  fireRate: 0.5
+--- !u!114 &7572475241098806754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498455291825729299}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73d93791ea4628045a4f64eab3121882, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}

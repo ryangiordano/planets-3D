@@ -6,20 +6,16 @@ public class Explodable : MonoBehaviour
 {
     public ParticleSystem explosionParticles;
     public AudioClip explosionSound;
-
-    void OnTriggerEnter(Collider collision)
+    public void SmallExplode()
     {
-        Projectile projectile = collision.GetComponent<Projectile>();
+        // Spawn particle effect
+        Instantiate(explosionParticles, transform.position, Quaternion.identity);
 
-        if (projectile)
-        {
-            Debug.Log(projectile);
-            Destroy(projectile.gameObject);
-            Explode();
-        }
+        // Play sound effect
+        // AudioSource.PlayClipAtPoint(explosionSound, transform.position);
     }
 
-    void Explode()
+    public void Explode()
     {
         // Destroy object
         Destroy(gameObject);

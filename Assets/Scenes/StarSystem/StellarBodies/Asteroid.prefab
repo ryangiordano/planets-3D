@@ -13,8 +13,11 @@ GameObject:
   - component: {fileID: 457809700685184450}
   - component: {fileID: 2808252645391316688}
   - component: {fileID: 8093729439149367575}
+  - component: {fileID: 2840966751306063679}
+  - component: {fileID: 6341440319291947979}
   - component: {fileID: 3291505857670496313}
   - component: {fileID: 2411156763980611793}
+  - component: {fileID: -3795737725630837538}
   m_Layer: 0
   m_Name: Asteroid
   m_TagString: Untagged
@@ -114,6 +117,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticles: {fileID: 5560253253664663853, guid: 0c2b174b1fd5dda4cab4e56882c772d4, type: 3}
   explosionSound: {fileID: 0}
+--- !u!114 &2840966751306063679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213342355653861159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c9f4b00444d2240925d7871f71d95d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealthPoints: 2
+--- !u!114 &6341440319291947979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213342355653861159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87662a5e2eadad74c8b85f16adb462cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3291505857670496313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +174,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-3795737725630837538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213342355653861159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88643e2e091f86b41840c1ebd1d422b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionParticles: {fileID: 0}
+  explosionSound: {fileID: 0}

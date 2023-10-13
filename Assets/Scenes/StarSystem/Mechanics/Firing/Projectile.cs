@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     public float speed = 50f;
     private float lifespan = 10.3f;
     public Vector3 direction;
+
+    public GameObject originObject;
     // Start is called before the first frame update
     void Start()
     {

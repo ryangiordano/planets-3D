@@ -18,6 +18,9 @@ public class Firing : MonoBehaviour
             targeting.getFiringDirection()
         );
 
+        Projectile p = projectileInstance.GetComponent<Projectile>();
+
+        p.originObject = gameObject;
         if (callback != null)
         {
             callback();

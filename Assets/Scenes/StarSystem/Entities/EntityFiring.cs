@@ -5,8 +5,8 @@ using UnityEngine;
 public class EntityFiring : MonoBehaviour
 {
     public float detectionRadius = 150f;
-    public float fireRate = 0.5f;
-    private float fireTimer = 0;
+    public float fireRate = 2f;
+    private float fireTimer = 2f;
     // Start is called before the first frame update
     void Start()
     {

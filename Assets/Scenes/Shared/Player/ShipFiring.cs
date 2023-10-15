@@ -14,7 +14,7 @@ public class ShipFiring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && fireTimer <= 0)
+        if (Input.GetMouseButtonDown(0) && fireTimer <= 0)
         {
             Firing firing = GetComponent<Firing>();
             firing.Fire(() =>

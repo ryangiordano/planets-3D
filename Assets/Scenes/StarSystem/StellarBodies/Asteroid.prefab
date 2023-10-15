@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2808252645391316688}
   - component: {fileID: 8093729439149367575}
   - component: {fileID: 2840966751306063679}
+  - component: {fileID: -6283467405195149310}
   - component: {fileID: 6341440319291947979}
   - component: {fileID: 3291505857670496313}
   - component: {fileID: 2411156763980611793}
@@ -34,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 1213342355653861159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 13.823999, z: 0.7212248}
-  m_LocalScale: {x: 0.98279995, y: 0.98279995, z: 0.98279995}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +102,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.53
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8093729439149367575
 MonoBehaviour:
@@ -129,7 +130,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c9f4b00444d2240925d7871f71d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 2
+  maxHealthPoints: 1
+--- !u!114 &-6283467405195149310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213342355653861159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ff4bf35867c8b41a28821f79fdd231, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 2
 --- !u!114 &6341440319291947979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,9 +169,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitAxis: {x: 0, y: 1, z: 0.5}
-  orbitSpeed: 15
+  orbitSpeed: 0.01
+  radius: 3
+  angle: 0
   parent: {fileID: 0}
-  child: {fileID: 0}
 --- !u!54 &2411156763980611793
 Rigidbody:
   m_ObjectHideFlags: 0

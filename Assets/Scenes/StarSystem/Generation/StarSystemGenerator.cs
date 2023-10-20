@@ -30,7 +30,7 @@ public class StarSystemGenerator : MonoBehaviour
             newAsteroid.transform.position = point;
             newAsteroid.GetComponent<Revolve>().orbitSpeed = Random.Range(0.01f, 0.05f);
             newAsteroid.GetComponent<Revolve>().parent = sun.transform;
-            newAsteroid.GetComponent<Revolve>().radius = Random.Range(35, 40)-20;
+            newAsteroid.GetComponent<Revolve>().radius = Random.Range(35, 40);
             newAsteroid.GetComponent<Revolve>().angle = Random.Range(0, 360);
             newAsteroid.GetComponent<StellarBodySize>().radius = Random.Range(1f, 2f);
         }

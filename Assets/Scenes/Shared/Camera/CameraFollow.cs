@@ -27,6 +27,7 @@ public class CameraFollow : MonoBehaviour
         //   ref velocity,
         //   smoothTime
         // );
+        targetPos.z = -40;
         transform.position = targetPos;
 
     }

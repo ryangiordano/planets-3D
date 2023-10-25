@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5498455291825729296}
   - component: {fileID: 5498455291825729297}
   - component: {fileID: 5498455291825729298}
+  - component: {fileID: 944670467319825115}
   - component: {fileID: -8825681631623877600}
   - component: {fileID: 1672448246379318593}
   - component: {fileID: 7946736937232869649}
@@ -105,6 +106,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &944670467319825115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498455291825729299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c036f90080aff6e4eab39ec6541c98de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alerted: 0
+  alertCooldown: 5
+  currentAlertCooldownValue: 5
 --- !u!114 &-8825681631623877600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ffb0ac7a0e41949917ba9590e9b499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  detectionRadius: 5
+  firingRange: 25
   fireRate: 0.5
 --- !u!114 &1996087932715106936
 MonoBehaviour:

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Damageable : MonoBehaviour
 {
+    public delegate void OnDamageCallback();
+    public event OnDamageCallback OnDamageEvent;
     void OnTriggerEnter(Collider collision)
     {
         Projectile projectile = collision.GetComponent<Projectile>();
@@ -27,6 +29,10 @@ public class Damageable : MonoBehaviour
         else
         {
             exlodable.SmallExplode();
+            if (OnDamageEvent != null)
+            {
+                OnDamageEvent.Invoke();
+            }
 
         }
     }

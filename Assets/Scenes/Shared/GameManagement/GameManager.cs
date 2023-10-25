@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        Debug.Log(currentStarSystemId);
         if (Instance != null)
         {
             Destroy(gameObject);

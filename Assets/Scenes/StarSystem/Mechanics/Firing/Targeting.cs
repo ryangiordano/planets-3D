@@ -22,4 +22,16 @@ public class Targeting : MonoBehaviour
 
     }
 
+
+    public float getDistance()
+    {
+        Vector3 myPosition = transform.position;
+        Vector3 targetPosition = target.transform.position;
+
+        // Calculate distance between positions
+        float distance = Vector3.Distance(myPosition, targetPosition);
+
+        return distance;
+    }
+
 }

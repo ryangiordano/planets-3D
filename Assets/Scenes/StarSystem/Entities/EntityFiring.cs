@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EntityFiring : MonoBehaviour
 {
-    public float detectionRadius = 150f;
+    public float firingRange = 50f;
     public float fireRate = 2f;
     private float fireTimer = 2f;
     // Start is called before the first frame update
@@ -16,20 +16,11 @@ public class EntityFiring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Probably can abstract this out into something else more generic and reusable
-        // Get position of this object
-        Vector3 myPosition = transform.position;
-
-        // Get position of target
         Targeting targeting = GetComponent<Targeting>();
+        Detection detection = GetComponent<Detection>();
 
-        Vector3 targetPosition = targeting.target.transform.position;
-
-        // Calculate distance between positions
-        float distance = Vector3.Distance(myPosition, targetPosition);
-        // Check if within detection radius
-
-        if (distance < detectionRadius && fireTimer <= 0)
+        float distance = targeting.getDistance();
+        if (distance < firingRange && fireTimer <= 0 && detection.alerted)
         {
 
             // Target is near

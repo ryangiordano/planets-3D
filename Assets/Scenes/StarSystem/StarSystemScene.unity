@@ -1057,6 +1057,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7122167160772453103, guid: 6a584a1a8a34eb94c9966fc759191a05, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 518803703}
     - target: {fileID: 7572475241098806754, guid: 6a584a1a8a34eb94c9966fc759191a05, type: 3}
       propertyPath: target
       value: 
@@ -1067,7 +1071,15 @@ PrefabInstance:
       objectReference: {fileID: 518803703}
     - target: {fileID: 7946736937232869649, guid: 6a584a1a8a34eb94c9966fc759191a05, type: 3}
       propertyPath: fireRate
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946736937232869649, guid: 6a584a1a8a34eb94c9966fc759191a05, type: 3}
+      propertyPath: firingRange
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946736937232869649, guid: 6a584a1a8a34eb94c9966fc759191a05, type: 3}
+      propertyPath: firingRadius
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 7946736937232869649, guid: 6a584a1a8a34eb94c9966fc759191a05, type: 3}
       propertyPath: detectionRadius

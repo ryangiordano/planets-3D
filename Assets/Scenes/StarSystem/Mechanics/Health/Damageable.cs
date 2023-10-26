@@ -10,7 +10,10 @@ public class Damageable : MonoBehaviour
     {
         Projectile projectile = collision.GetComponent<Projectile>();
         HealthModule healthModule = GetComponent<HealthModule>();
-        if (projectile && projectile.originObject != gameObject)
+
+        if (projectile &&
+        projectile.originObject != gameObject &&
+        projectile.originObject.tag != gameObject.tag)
         {
             Destroy(projectile.gameObject);
             int currentHealthPoints = healthModule.decreaseHealth();
